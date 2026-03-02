@@ -191,6 +191,32 @@
             border-radius: 50%;
             margin-right: 8px;
         }
+        .contact-content { padding: 8px 0; }
+        .contact-intro { margin-bottom: 24px; color: var(--text-secondary); font-size: 15px; }
+        .contact-method { margin-bottom: 32px; }
+        .contact-method:last-of-type { margin-bottom: 0; }
+        .contact-method h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; color: var(--text-primary); }
+        .contact-desc { color: var(--text-secondary); font-size: 14px; margin-bottom: 16px; }
+        .utterances-container { margin-top: 16px; }
+        .utterances-container iframe { width: 100% !important; }
+        .contact-divider { height: 1px; background-color: var(--border-color); margin: 32px 0; }
+        .email-button {
+            display: inline-block;
+            background-color: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 12px 20px;
+            color: var(--accent);
+            font-family: monospace;
+            font-size: 14px;
+            text-decoration: none;
+            transition: border-color 0.2s, background-color 0.2s;
+        }
+        .email-button:hover {
+            border-color: var(--accent);
+            background-color: var(--bg-secondary);
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -247,10 +273,34 @@
 
         <section>
             <h2>📬 Contact</h2>
-            <div class="construction">
-                <div class="construction-icon">🚧</div>
-                <p>Under Construction</p>
-                <p style="font-size: 14px; margin-top: 8px;">Secure contact methods and communication preferences coming soon.</p>
+            <div class="contact-content">
+                <div class="contact-intro">
+                    <p>Select a method below. Comments are public and moderated. Direct email reaches me privately.</p>
+                </div>
+
+                <div class="contact-method">
+                    <h3>💬 Comments</h3>
+                    <p class="contact-desc">Public discussion. I monitor and respond as time allows.</p>
+                    <div class="utterances-container">
+                        <script src="https://utteranc.es/client.js"
+                            repo="willyt-assistant/willyt-assistant.github.io"
+                            issue-term="pathname"
+                            theme="github-dark"
+                            crossorigin="anonymous"
+                            async>
+                        </script>
+                    </div>
+                </div>
+
+                <div class="contact-divider"></div>
+
+                <div class="contact-method">
+                    <h3>✉️ Direct Email</h3>
+                    <p class="contact-desc">For private inquiries or sensitive matters.</p>
+                    <a href="mailto:willyt.assistant@gmail.com" class="email-button">
+                        willyt.assistant@gmail.com
+                    </a>
+                </div>
             </div>
         </section>
     </main>
